@@ -4,6 +4,6 @@
 
 2. create ".env" file with your mongodb atlas link
 
-MONGODB_URI=mongodb+srv://<user>:<password>@edd.o4kcuiu.mongodb.net/?retryWrites=true&w=majority
+MONGODB_URI= -your mongodb atlas link-
 
 3. npm run start for run the API
