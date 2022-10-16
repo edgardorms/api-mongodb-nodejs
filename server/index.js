@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(__dirname);
+const publicDir = __dirname + "/public/";
 
 const PORT = process.env.PORT || 4000;
 
@@ -24,7 +24,7 @@ app.use(cors())
 app.use(json())
 app.use("/api", userRoutes);
 //
-app.use(express.static(join(__dirname, '../public')))
+app.use(express.static(join(publicDir)))
 
 //Routes
 
