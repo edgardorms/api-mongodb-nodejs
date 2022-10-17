@@ -28,9 +28,13 @@ app.use(express.static(join(__dirname, '../public')))
 
 //Routes
 
-app.get("/welcome", (req, res) => {
-  res.send("Welcome to my API");
-});
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 //mongodb connect
 
